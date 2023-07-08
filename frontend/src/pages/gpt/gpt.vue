@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="chat-room-container">
-      <h1>Chat Rooms</h1>
+      <h1>Chat Room</h1>
       <ul>
         <li v-for="(chat, index) in chatRooms" :key="index" @click="selectChatRoom(chat.chatNum)" :class="{'selected': chat.chatNum === selectedChatRoom}">
           Chat Room {{ chat.chatNum }}

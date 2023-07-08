@@ -1,4 +1,5 @@
 <template>
+
  <div class="menu">
    <router-link to="/">HomePage</router-link> 
    <router-link to="/postList">PostListPage</router-link>

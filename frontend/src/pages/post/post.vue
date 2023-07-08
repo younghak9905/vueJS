@@ -1,5 +1,5 @@
 <template>
-  <h1>postPages</h1>
+  <h1>post-page</h1>
   <div>
     <h1 v-if="post">{{ post.title }}</h1>
     <p v-if="post">{{ post.content }}</p>
