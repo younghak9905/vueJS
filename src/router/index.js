@@ -3,9 +3,9 @@ import { createRouter,createWebHistory} from "vue-router";
 import HomePage from '../pages/index.vue'
 import PostPage from '../pages/post/post.vue'
 import PostListPage from '../pages/post/postList.vue'
-import NotFoundPage from '../pages/NotFound.vue'
 import GptPage from '../pages/gpt/gpt.vue'
 import TestPage from '../pages/test.vue'
+import LoginPage from '../pages/login.vue'
 
 const router= createRouter({
     history: createWebHistory(),
@@ -26,15 +26,6 @@ const router= createRouter({
             component: PostListPage
         },
         {
-            path: "/notFound",
-            name: "notFoundPage",
-            component: NotFoundPage
-        },
-        {
-            path: "/:pathMatch(.*)*",
-            redirect: "/notFound"
-        },
-        {
             path: "/gpt",
             name: "gptPage",
             component: GptPage
@@ -43,7 +34,14 @@ const router= createRouter({
             path:"/test",
             name:"test",
             component: TestPage
+        },
+        {
+          path: "/login",
+          name: "login",
+          component: LoginPage  
         }
+
+
         ]
 });
 //1 /home /post  /postList /gpt /mypage

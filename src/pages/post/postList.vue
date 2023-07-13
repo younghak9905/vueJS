@@ -10,7 +10,6 @@
   </template>
   
   <script>
-  import axios from 'axios';
   
   export default {
     name: 'PostListPage',
@@ -24,7 +23,7 @@
     },
     methods: {
       fetchPostList() {
-        axios.get('http://localhost:8080/posts/list')
+        this.$axios.get(this.$serverUrl+'/posts/list')
           .then(response => {
             this.postList = response.data.data.postList;
           })

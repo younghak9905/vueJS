@@ -45,7 +45,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 
 export default {
   name: 'gptPage',
@@ -79,8 +78,8 @@ export default {
       });
 
       // Send the message to the server
-      axios
-          .post(`/chatGPT?isUsed=${this.isUsed}&chatRoomNum=${this.selectedChatRoom}`, {
+     this.$axios
+          .post(this.$serverUrl+`/chatGPT?isUsed=${this.isUsed}&chatRoomNum=${this.selectedChatRoom}`, {
 
             content: this.content
 
@@ -103,7 +102,7 @@ export default {
     },
 
     getMessage(){
-      axios.get(`/chatGPT/view/${this.selectedChatRoom}`)
+      this.$axios.get(this.$serverUrl+`/chatGPT/view/${this.selectedChatRoom}`)
 
           .then(response => {
 

@@ -6,7 +6,6 @@
   </div>
 </template>
 <script>
-import axios from 'axios';
 export default {
   name: 'testPage',
   data: function () {
@@ -21,9 +20,11 @@ export default {
   mounted() {
     this.getTest();
   },
+
   methods: {
+
     postTest: function () {
-      axios.post(`http://localhost:8080/test/post?name=${this.name}`, {
+      this.$axios.post(this.$serverUrl+`/test/post?name=${this.name}`, {
         content: "안녕하세요"
       }).then(res => {
         console.log(res.data.data.response);
@@ -32,7 +33,7 @@ export default {
       });
     },
     getTest: function () {
-      axios.get('http://localhost:8080/test/get').then(res => {
+      this.$axios.get(this.$serverUrl+'/test/get').then(res => {
         console.log(res);
       }).catch(err => {
         console.log(err);

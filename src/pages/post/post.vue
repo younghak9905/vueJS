@@ -12,8 +12,6 @@
 
 
 <script>
-import axios from 'axios';
-
 export default {
   name: 'PostPage',
   data() {
@@ -27,7 +25,7 @@ export default {
   },
   methods: {
     fetchPost(postId) {
-      axios.get(`http://localhost:8080/posts/list/${postId}`)
+      this.$axios.get(this.$serverUrl+`/posts/list/${postId}`)
           .then(response => {
             this.post = response.data.data.post;
           })

@@ -5,6 +5,7 @@
    <router-link to="/postList">PostListPage</router-link>
    <router-link to="/gpt">GptPage</router-link>
    <router-link to="/test">TestPage</router-link>
+   <router-link to="/login">LoginPage</router-link>
 
 </div>
 
