@@ -1,5 +1,7 @@
 <template>
-
+ <div class="signlog">
+  <router-link to="/signup" class="signup" v-model="signup">Signup</router-link>
+ </div>
  <div class="menu">
    <router-link to="/">HomePage</router-link> 
    <router-link to="/postList">PostListPage</router-link>
@@ -40,5 +42,11 @@ export default {
 .menu a{
   color: white;
   padding: 10px;
+}
+.signlog {
+  font-size: 20px;
+  position: absolute;
+  top : 2.5%;
+  right: 5%;
 }
 </style>

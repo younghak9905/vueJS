@@ -6,6 +6,7 @@ import PostListPage from '../pages/post/postList.vue'
 import GptPage from '../pages/gpt/gpt.vue'
 import TestPage from '../pages/test.vue'
 import LoginPage from '../pages/login.vue'
+import SignUpPage from '../pages/signup.vue'
 
 const router= createRouter({
     history: createWebHistory(),
@@ -39,7 +40,12 @@ const router= createRouter({
           path: "/login",
           name: "login",
           component: LoginPage  
-        }
+        },
+        {
+            path:"/signup",
+            name:"signup",
+            component: SignUpPage
+        },
 
 
         ]
